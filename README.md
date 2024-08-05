@@ -1,1 +1,1 @@
-im working on this... its ment to be a full termux vpn and static software!
+this isin a beta stage. no testing has been done nore does the software have full functonality.
