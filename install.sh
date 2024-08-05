@@ -14,6 +14,8 @@ install_dependencies() {
   echo ""
 
   if [[ $REPLY =~ ^[Yy]$ ]]; then
+    pkg update
+    pkg upgrade
     pip install -r requirements.txt
     sleep 1
     echo "You may now type these commands to run the software:
