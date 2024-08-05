@@ -28,8 +28,10 @@ install_dependencies() {
     pip install -r requirements.txt
     sleep 1
     echo "You may now type these commands to run the software:
-    'cd vpn'
-    'python run.py'
+    'cd vpn' - Go to dir
+    'chmod +x vpn_tui.py' - Make executable
+    './vpn_tui.py' - Run file
+    
     "
   else
     echo "Installation cancelled."
