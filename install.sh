@@ -43,7 +43,7 @@ How to run the software:
   fi
 }
 
-install_VPNdependencies() {
+install_STCdependencies() {
 clear
 echo 'still being set up!'
 }
@@ -58,7 +58,9 @@ read -p "Please type number" -n 1 -r
   if [[ $REPLY =~ ^[1]$ ]]; then
     clear
     install_VPNdependencies # call 
-  if [[ $REPLY =~ ^[2]$ ]]; then
+  elif [[ $REPLY =~ ^[2]$ ]]; then
     clear
     install_STCdependencies # call 
-  
+  else
+    echo "err"
+  fi
