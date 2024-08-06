@@ -48,7 +48,7 @@ clear
 echo 'still being set up!'
 }
 
-banner() {
+banner() { #I got a ppan for this banner design later
 echo "
 banner here!
 [1] Install VPN dependencies
