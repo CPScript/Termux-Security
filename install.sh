@@ -48,12 +48,16 @@ clear
 echo 'still being set up!'
 }
 
+banner() {
 echo "
 banner here!
 [1] Install VPN dependencies
 [2] Install Static dependencies
 [3] place holder!
 "
+}
+
+banner
 read -p "Please type number" -n 1 -r
   if [[ $REPLY =~ ^[1]$ ]]; then
     clear
