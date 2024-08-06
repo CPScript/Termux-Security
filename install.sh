@@ -1,16 +1,16 @@
 #!/bin/bash
 
-install_dependencies() {
+install_VPNdependencies() {
   if [ ! -f requirements.txt ]; then
     echo "Error: 'requirements.txt' not found. Please re-install this repository!"
     return 1
   fi
 
   dependencies=$(cat requirements.txt)
-
+  clear # clear everything
   echo "The following dependencies will be installed:"
   echo "$dependencies"
-  read -p "Do you want to install them? (y/n) " -n 1 -r
+  read -p "Please confirm installation (y/n) " -n 1 -r
   echo ""
 
   if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -29,6 +29,8 @@ install_dependencies() {
     sleep 1
     echo '
     done!'
+    sleep 2
+    clear
     echo "
 How to run the software:
 'cd vpn' - Go to dir
@@ -41,4 +43,22 @@ How to run the software:
   fi
 }
 
-install_dependencies
+install_VPNdependencies() {
+clear
+echo 'still being set up!'
+}
+
+echo "
+banner here!
+[1] Install VPN dependencies
+[2] Install Static dependencies
+[3] place holder!
+"
+read -p "Please type number" -n 1 -r
+  if [[ $REPLY =~ ^[1]$ ]]; then
+    clear
+    install_VPNdependencies # call 
+  if [[ $REPLY =~ ^[2]$ ]]; then
+    clear
+    install_STCdependencies # call 
+  
