@@ -18,19 +18,22 @@ install_dependencies() {
     sleep 2
     pkg update
     pkg upgrade
-    clr
-    echo 'installing python'
+    echo '
+    installing python'
     sleep 2
     pkg install python
-    clr
-    echo 'installing requirements'
+    echo '
+    installing requirements'
     sleep 2
     pip install -r requirements.txt
     sleep 1
-    echo "You may now type these commands to run the software:
-    'cd vpn' - Go to dir
-    'chmod +x vpn_tui.py' - Make executable
-    './vpn_tui.py' - Run file
+    echo '
+    done!'
+    echo "
+How to run the software:
+'cd vpn' - Go to dir
+'chmod +x vpn_tui.py' - Make executable
+'./vpn_tui.py' - Run file
     
     "
   else
