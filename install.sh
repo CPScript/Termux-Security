@@ -35,7 +35,7 @@ install_VPNdependencies() {
 How to run the software:
 'cd vpn' - Go to dir
 'chmod +x vpn_tui.py' - Make executable
-'./vpn_tui.py' - Run file
+'vpn_tui.py' - Run file
     
     "
   else
