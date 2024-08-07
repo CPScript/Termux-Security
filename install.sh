@@ -61,7 +61,7 @@ banner here!
 "
 }
 
-mainloop() {
+menu() {
 banner
 echo -e '┌─[number] - [User-Input]'
 read -p "└─────> " -n 1 -r
@@ -78,4 +78,5 @@ read -p "└─────> " -n 1 -r
   fi
 }
 
-mainloop
+#mainloop
+menu
