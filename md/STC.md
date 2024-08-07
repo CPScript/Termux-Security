@@ -1,5 +1,7 @@
 # STATIC.sh notes:
 
+---
+
 This is a background noise generator that runs in termux in the background of your android phone (it makes background traffic to make your data less interesting to sell)... This is the beta version I am going to release soon (this has been given out to 2 people for them to review and make changes!
 
 ```shell
