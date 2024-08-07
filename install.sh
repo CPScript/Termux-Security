@@ -59,7 +59,7 @@ install_dependencies() {
   fi
 }
 
-banner() {
+banner() { #I got a plan for this banner design later
 echo "
 ===============================
 Simple Termux Security Software
@@ -67,7 +67,8 @@ By - CPScript on GitHub
 --------|TERMUX ONLY|----------
 [1] Install dependencies
 [2] Execute Software
-[3] place holder!
+-
+[e] Exit
 "
 }
 
@@ -81,6 +82,13 @@ read -p "└─────> " -n 1 -r
     echo ''
     sleep 0.5
     cd ~/Android-stuff/src && menu.sh
+  elif [[ $REPLY =~ ^[e]$ ]]; then
+    echo ''
+    echo "Exiting and Returning"
+    sleep 2
+    clear
+    cd ~/
+    exit
   else
     clear
     echo "err: Please type a number."
