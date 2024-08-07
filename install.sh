@@ -59,9 +59,12 @@ install_dependencies() {
   fi
 }
 
-banner() { #I got a plan for this banner design later
+banner() {
 echo "
-banner here!
+===============================
+Simple Termux Security Software
+By - CPScript on GitHub
+--------|TERMUX ONLY|----------
 [1] Install dependencies
 [2] Execute Software
 [3] place holder!
