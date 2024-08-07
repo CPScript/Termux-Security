@@ -1,9 +1,10 @@
 #!/bin/bash
 
 dir_check() {
-echo 'Directory switched to:' "$(pwd)" 
-sleep 0.25
 clear
+  echo 'Directory switched to:' "$(pwd)" 
+  sleep 1
+  clear
 }
 
 install_dependencies() {
@@ -72,10 +73,9 @@ banner
 echo -e '┌─[number] - [User-Input]'
 read -p "└─────> " -n 1 -r
   if [[ $REPLY =~ ^[1]$ ]]; then
-    clear
     install_dependencies # call 
   elif [[ $REPLY =~ ^[2]$ ]]; then
-    echo 'works'
+    echo ''
     sleep 0.5
     cd ~/Android-stuff/src && menu.sh
   else
@@ -86,4 +86,7 @@ read -p "└─────> " -n 1 -r
 
 #mainloop
 dir_check
+echo 'Follow CPScript on github'
+sleep 1
+clear
 menu
