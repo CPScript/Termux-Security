@@ -1,3 +1,7 @@
+# VPN.sh
+
+---
+
 ## Introduction
 * This script provides a simple and user-friendly way to configure and connect to a VPN using OpenVPN. It uses the npyscreen library to create a text-based user interface, making it easy to navigate and configure your VPN settings.
 
