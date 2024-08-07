@@ -39,7 +39,7 @@ install_VPNdependencies() {
     else
       break
     fi
-    ;;
+    
      
   else
     echo "Installation cancelled."
