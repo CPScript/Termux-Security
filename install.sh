@@ -32,18 +32,23 @@ install_dependencies() {
     done!'
     sleep 2
     clear
-    echo "Function executed!"
+    echo "Finished installing dependancies"
+    echo "If there were any errors, please make an issue at https://github.com/CPScript/Android-stuff"
+    echo ""
     read -p "Back to Menu? (y/n): " rmenu
     if [ "$rmenu" = "y" ]; then
-      clear
-      continue
+      mainloop
     else
       break
     fi
     
-     
+  elif [[ $REPLY =~ ^[Nn]$ ]]; then
+    clear
+    echo "Installation cancelled." 
+    
   else
-    echo "Installation cancelled."
+    echo "err: Please type Y/y or N/n"
+    echo "Please try again."
   fi
 }
 
@@ -56,8 +61,10 @@ banner here!
 "
 }
 
+mainloop() {
 banner
-read -p "Please type number" -n 1 -r
+echo -e '┌─[number] - [User-Input]'
+read -p "└─────> " -n 1 -r
   if [[ $REPLY =~ ^[1]$ ]]; then
     clear
     install_dependencies # call 
@@ -65,5 +72,9 @@ read -p "Please type number" -n 1 -r
     clear
     echo 'works'
   else
-    echo "err"
+    clear
+    echo "err: Please type a number."
   fi
+}
+
+mainloop
