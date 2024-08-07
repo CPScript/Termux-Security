@@ -1,12 +1,12 @@
 #!/bin/bash
 
 install_VPNdependencies() {
-  if [ ! -f requirements.txt ]; then
-    echo "Error: 'requirements.txt' not found. Please re-install this repository!"
+  if [ ! -f STCrequirements.txt ]; then
+    echo "Error: 'VPNrequirements.txt' not found. Please re-install this repository or such file."
     return 1
   fi
 
-  dependencies=$(cat requirements.txt)
+  dependencies=$(cat VPNrequirements.txt)
   clear # clear everything
   echo "The following dependencies will be installed:"
   echo "$dependencies"
@@ -25,7 +25,7 @@ install_VPNdependencies() {
     echo '
     installing requirements'
     sleep 2
-    pip install -r requirements.txt
+    pip install -r VPNrequirements.txt
     sleep 1
     echo '
     done!'
@@ -33,7 +33,7 @@ install_VPNdependencies() {
     clear
     echo "
 How to run the software:
-'cd vpn' - Go to dir
+'cd src' - Go to dir
 'chmod +x vpn_tui.py' - Make executable
 'vpn_tui.py' - Run file
     
@@ -44,11 +44,48 @@ How to run the software:
 }
 
 install_STCdependencies() {
-clear
-echo 'still being set up!'
+  if [ ! -f STCrequirements.txt ]; then
+    echo "Error: 'STCrequirements.txt' not found. Please re-install this repository or such file."
+    return 1
+  fi
+
+  dependencies=$(cat STCrequirements.txt)
+  clear # clear everything
+  echo "The following dependencies will be installed:"
+  echo "$dependencies"
+  read -p "Please confirm installation (y/n) " -n 1 -r
+  echo ""
+
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo 'updating!'
+    sleep 2
+    pkg update
+    pkg upgrade
+    echo '
+    installing python'
+    sleep 2
+    pkg install python
+    echo '
+    installing requirements'
+    sleep 2
+    pip install -r STCrequirements.txt
+    sleep 1
+    echo '
+    done!'
+    sleep 2
+    clear
+    echo "
+How to execute the software:
+'cd src' - Go to dir
+'menu.sh' - Execute
+    
+    "
+  else
+    echo "Installation cancelled."
+  fi
 }
 
-banner() { #I got a ppan for this banner design later
+banner() { #I got a plan for this banner design later
 echo "
 banner here!
 [1] Install VPN dependencies
