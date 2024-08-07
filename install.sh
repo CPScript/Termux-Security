@@ -1,15 +1,16 @@
 #!/bin/bash
 
-install_VPNdependencies() {
-  if [ ! -f STCrequirements.txt ]; then
-    echo "Error: 'VPNrequirements.txt' not found. Please re-install this repository or such file."
+install_dependencies() {
+  if [ ! -f requirements.txt ]; then
+    echo "Error: 'requirements.txt' not found. Please re-install this repository or such file."
     return 1
   fi
 
-  dependencies=$(cat VPNrequirements.txt)
+  dependencies=$(cat requirements.txt)
   clear # clear everything
   echo "The following dependencies will be installed:"
   echo "$dependencies"
+  echo ""
   read -p "Please confirm installation (y/n) " -n 1 -r
   echo ""
 
@@ -25,7 +26,7 @@ install_VPNdependencies() {
     echo '
     installing requirements'
     sleep 2
-    pip install -r VPNrequirements.txt
+    pip install -r requirements.txt
     sleep 1
     echo '
     done!'
@@ -59,10 +60,10 @@ banner
 read -p "Please type number" -n 1 -r
   if [[ $REPLY =~ ^[1]$ ]]; then
     clear
-    install_VPNdependencies # call 
+    install_dependencies # call 
   elif [[ $REPLY =~ ^[2]$ ]]; then
     clear
-    install_STCdependencies # call 
+    echo 'works'
   else
     echo "err"
   fi
