@@ -69,8 +69,12 @@ read -p "└─────> " -n 1 -r
     clear
     install_dependencies # call 
   elif [[ $REPLY =~ ^[2]$ ]]; then
-    clear
     echo 'works'
+    sleep 0.5
+    cd ~/src
+    cd "$(pwd)" # make src the new main dir
+    termux-exec ~/src/menu.sh
+
   else
     clear
     echo "err: Please type a number."
