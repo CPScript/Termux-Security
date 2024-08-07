@@ -81,7 +81,7 @@ read -p "└─────> " -n 1 -r
   elif [[ $REPLY =~ ^[2]$ ]]; then
     echo ''
     sleep 0.5
-    cd ~/Android-stuff/src && menu.sh
+    cd ~/Termux-Sec/src && menu.sh
   elif [[ $REPLY =~ ^[e]$ ]]; then
     echo ''
     echo "Exiting and Returning"
@@ -91,7 +91,11 @@ read -p "└─────> " -n 1 -r
     exit
   else
     clear
-    echo "err: Please type a number."
+    echo 'err: Please type a number.'
+    sleep 1
+    echo 'restarting install.sh'
+    sleep 1
+    menu
   fi
 }
 
