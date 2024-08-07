@@ -33,7 +33,7 @@ install_dependencies() {
     sleep 2
     clear
     echo "Finished installing dependancies"
-    echo "If there were any errors, please make an issue at https://github.com/CPScript/Android-stuff"
+    echo "If there were any errors, please make an issue at https://github.com/CPScript/Termux-Sec"
     echo ""
     read -p "Back to Menu? (y/n): " rmenu
     if [ "$rmenu" = "y" ]; then
