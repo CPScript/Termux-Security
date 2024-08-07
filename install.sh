@@ -71,9 +71,9 @@ read -p "└─────> " -n 1 -r
   elif [[ $REPLY =~ ^[2]$ ]]; then
     echo 'works'
     sleep 0.5
-    cd ~/src
+    cd ~/Android-stuff/src
     cd "$(pwd)" # make src the new main dir
-    termux-exec ~/src/menu.sh
+    termux-exec ~/Android-stuff/src/menu.sh
 
   else
     clear
