@@ -71,8 +71,7 @@ read -p "└─────> " -n 1 -r
   elif [[ $REPLY =~ ^[2]$ ]]; then
     echo 'works'
     sleep 0.5
-    cd ~/Android-stuff/src && ./menu.sh
-
+    cd ~/Android-stuff/src && menu.sh
   else
     clear
     echo "err: Please type a number."
