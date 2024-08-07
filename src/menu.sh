@@ -1,5 +1,2 @@
-echo "making directory edits"
-sleep 1
-cd "$(pwd)" # make 'src' the main dir
+echo 'Directory switched to:' "$(pwd)" 
 sleep 0.5
-echo "done!"
