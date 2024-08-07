@@ -1,5 +1,11 @@
 #!/bin/bash
 
+dir_check() {
+echo 'Directory switched to:' "$(pwd)" 
+sleep 0.25
+clear
+}
+
 install_dependencies() {
   if [ ! -f requirements.txt ]; then
     echo "Error: 'requirements.txt' not found. Please re-install this repository or such file."
@@ -79,4 +85,5 @@ read -p "└─────> " -n 1 -r
 }
 
 #mainloop
+dir_check
 menu
