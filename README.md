@@ -1,3 +1,14 @@
-## Please help me and contribute on this repository so it can work more efficently and be effective! <3
+<div align=center>
 
-this is in a beta stage. no testing has been done nor does the software have full functonality.
+#### Warning, this software might not fully function at some times. please be carefull and dont break your device!
+
+
+<div align=left>
+  
+# INSTALLING:
+* Download git - `pkg install git`
+* Clone repo - `git clone https://github.com/CPScript/Termux-Sec`
+* Move to Directory - `cd Termux-Sec`
+* Execute script - `bash install.sh`
+---
+Enjoy!
