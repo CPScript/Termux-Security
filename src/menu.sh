@@ -25,7 +25,7 @@ By - CPScript on GitHub
 
 back_func() {
   cd ~/ # return home
-  cd ~/Termux-Sec && ./install.sh # change back and re-run install.sh
+  cd ~/Termux-Sec && bash install.sh # change back and re-run install.sh
   # should do a directory check when 'install.sh' is ran
 }
 
