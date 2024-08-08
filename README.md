@@ -11,4 +11,4 @@
 * Move to Directory - `cd Termux-Sec`
 * Execute script - `bash install.sh`
 ---
-Enjoy!
+This repo is still under development and will be for some time, please know that it might not work. Contributers are always welcome to help with development and bugs!
